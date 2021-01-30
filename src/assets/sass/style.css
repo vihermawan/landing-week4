@@ -402,6 +402,120 @@ footer .links a:first-child {
   margin-top: 26%;
 }
 
+/* media queries */
+
+@media screen and (min-width: 450px) {
+  .footer__logo-insure {
+    margin-top: 4%;
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    overflow-y: visible !important;
+  }
+  .main-nav .main-nav-item .nav-btn:hover {
+    background-color: hsl(270, 9%, 17%);
+    color: #fffcff;
+  }
+  .main__intro {
+    padding-top: 10%;
+  }
+  .site-navbar {
+    flex-direction: row;
+    padding: 30px 15px;
+    position: fixed;
+    z-index: 1000000;
+  }
+  .main-nav {
+    display: block;
+    position: relative;
+    top: 0;
+    width: 71%;
+    height: 70px;
+    padding: 0;
+    background: transparent;
+    /* to hide scroll in y for medium, large screens */
+    overflow-y: unset;
+  }
+  .main-nav ul {
+    flex-direction: row;
+    height: inherit;
+    justify-content: flex-end;
+  }
+
+  .hamburger-icon,
+  .close-icon {
+    display: none;
+  }
+
+  .main-nav .main-nav-item {
+    cursor: pointer;
+    padding-right: 25px;
+  }
+
+  .main-nav .main-nav-item a {
+    font-size: 14px;
+    font-weight: 700;
+    color: hsl(273, 4%, 51%);
+    text-transform: uppercase;
+  }
+
+  .main-nav .main-nav-item a:hover {
+    color: hsl(270, 9%, 17%);
+  }
+
+  .main-nav-item:last-child {
+    align-self: auto;
+  }
+
+  .main-nav .main-nav-item:hover {
+    color: #2b282f;
+  }
+
+  .main-nav .main-nav-item:last-child {
+    padding-right: 0;
+  }
+
+  .main-nav .nav-btn {
+    padding: 10px;
+    font-size: 12px;
+    color: hsl(270, 9%, 17%);
+    border: 2px solid hsl(270, 9%, 17%);
+  }
+  .main-nav .nav-btn:hover {
+    color: #fffcff;
+    background-color: #2b282f;
+  }
+
+  .intro-text {
+    padding: 95px 130px;
+  }
+  .intro-text p {
+    margin: 27px 0;
+  }
+  .main__features {
+    margin: 5% 15% 15%;
+  }
+
+  .footer__container {
+    margin-top: 9%;
+  }
+  .logo_social-container {
+    /* background-image: url(../images/bg-pattern-footer-desktop.svg);*/
+    margin-bottom: 0%;
+  }
+  .footer__links {
+    margin-top: 6%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer__link {
+    width: 50%;
+  }
+}
+
 @media only screen and (min-width: 980px) {
   .site-navbar {
     padding: 30px 100px;
@@ -429,25 +543,36 @@ footer .links a:first-child {
   }
   .header-img {
     position: absolute;
+    /* right: -33px; */
+    top: 115px;
+  }
+  .intro-text {
+    width: 45%;
+    position: relative;
+    padding: 115px 0;
+    text-align: left;
+    background-image: none;
+    background-color: transparent;
+  }
+  .image-intro {
+    position: relative;
     width: 45%;
   }
   .intro-text h1 {
     text-align: left;
     font-size: 63px;
   }
-
   .intro-text button {
+    /* to position button over pattern */
     position: absolute;
     z-index: 500000;
   }
-
   .horizontal-line {
     display: block;
     width: 30%;
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 60px;
   }
-
   .right-pattern {
     background-image: url(../img/bg-pattern-intro-right-desktop.svg);
     background-repeat: no-repeat;
@@ -464,10 +589,13 @@ footer .links a:first-child {
     left: 0;
     visibility: visible;
   }
-  button .button {
+  button.button {
     width: 23%;
     margin-top: 9%;
     font-size: 2em;
+  }
+  p {
+    /* font-size: 1.2em; */
   }
   .process img,
   .prices img,
@@ -479,31 +607,28 @@ footer .links a:first-child {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 5% 5%;
   }
-
   .main__features h3 {
     text-align: left;
   }
-
+  .main__features h3 {
+    text-align: left;
+  }
   .how-text {
     flex-direction: row;
     justify-content: space-between;
   }
-
   .how-text h2 {
     margin: auto 3%;
     font-size: 4em;
     width: 60%;
     text-align: left;
   }
-
   .how-text .primary-btn {
     margin-right: 5%;
   }
-
   hr {
     width: 80%;
   }
-
   .main__how {
     background-image: url(../img/bg-pattern-how-we-work-desktop.svg);
     background-position: top right;
@@ -513,19 +638,18 @@ footer .links a:first-child {
     width: 80%;
     margin: auto;
   }
-
   .process,
   .prices,
   .people {
     text-align: left;
   }
-
+  /* footer */
   .logo_social-container {
-    /* background-image: url(../images/bg-pattern-footer-desktop.svg); */
+    /* background-image: url(../img/bg-pattern-footer-desktop.svg); */
     flex-direction: row;
   }
   .footer__logo {
-    background-image: url(../images/bg-pattern-footer-desktop.svg);
+    background-image: url(../img/bg-pattern-footer-desktop.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: contain;
@@ -603,7 +727,7 @@ footer .links a:first-child {
     font-size: 72px;
   }
   .right-pattern {
-    background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+    background-image: url(../img/bg-pattern-intro-right-desktop.svg);
     background-repeat: no-repeat;
     background-position: right top;
     position: absolute;
@@ -611,7 +735,7 @@ footer .links a:first-child {
     right: 0;
   }
   .left-pattern {
-    background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+    background-image: url(../img/bg-pattern-intro-left-desktop.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
     position: absolute;
